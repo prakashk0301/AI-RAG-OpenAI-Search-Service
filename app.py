@@ -23,7 +23,7 @@ def main():
         
         # Initialize the Azure OpenAI client
         client = AzureOpenAI(
-            base_url=f"{azure_oai_endpoint}/openai/deployments/{azure_oai_deployment}/extensions",
+            base_url=azure_oai_endpoint.rstrip('/'),
             api_key=azure_oai_key,
             api_version="2023-09-01-preview")
 
